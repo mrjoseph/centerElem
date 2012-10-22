@@ -20,9 +20,14 @@ centerElem.vars = {
 				var elemHeight = $(this).height();
 				var containerHeight = $(this).parent().height();
 				var elemMiddle = elemHeight / 2;
+
 				var containerMiddle = containerHeight / 2;
-				var centerPos = 
-				$(this).find('.info').html('container height = '+ containerHeight + ' element height = ' + elemHeight);
+				var centerPos = containerMiddle - elemMiddle;
+				console.log(containerHeight + ' ' + elemMiddle);
+				$(this).css({
+					marginTop : centerPos,
+				});
+				// $(this).find('.info').html('container height = '+ containerHeight + ' element height = ' + elemHeight);
 
 			});
 		}

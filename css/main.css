@@ -103,8 +103,15 @@ h2{
 }
 .square{
     width:400px;
-    
-    
+    overflow: auto;
+}
+.centerElement{
+    width:80%;
+    height:150px;
+    margin:auto;
+    border-radius: 10px;
+    background: #000;
+
 }
 #left-col{
     float:left;
