@@ -123,8 +123,16 @@ h2{
 }
 
 
-
-
+.info{
+    color:#fff;
+    padding:10px;
+    display:block;
+}
+.container-box{
+    width:600px;
+    height:600px;
+    background: red;
+}
 
 /* ==========================================================================
    Media Queries

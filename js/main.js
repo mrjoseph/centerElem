@@ -1,38 +1,21 @@
-
-/* 
-	1) locate the element that you want to center
-	2) get the parent element
-	3) get the parent element dimentions
-*/
-
-var centerElem = centerElem || {};
-centerElem.vars = centerElem.vars || {};
-centerElem.app = centerElem.app || {};
-
-centerElem.vars = {
-
-}
-
-	centerElem.app = {
-		
-		init: function(){
-			$('.centerElement').each(function(index){
-				var elemHeight = $(this).height();
-				var containerHeight = $(this).parent().height();
-				var elemMiddle = elemHeight / 2;
-
-				var containerMiddle = containerHeight / 2;
-				var centerPos = containerMiddle - elemMiddle;
-				console.log(containerHeight + ' ' + elemMiddle);
+(function( $ ) {
+	$.fn.centerElement = function() {
+		var $elem = $(this);
+		(function(){
+			$elem.each(function(index){
+				var
+				elemHeight = $(this).height(),
+				containerHeight = $(this).parent().height(),
+				elemMiddle = elemHeight / 2,
+				containerMiddle = containerHeight / 2,
+				centerPos = containerMiddle - elemMiddle;
 				$(this).css({
-					marginTop : centerPos,
+					marginTop : centerPos
 				});
-				// $(this).find('.info').html('container height = '+ containerHeight + ' element height = ' + elemHeight);
-
 			});
-		}
+		}());
 	};
+})( jQuery );
 
-$(document).ready(function(){
-	centerElem.app.init();
-});
+
+
